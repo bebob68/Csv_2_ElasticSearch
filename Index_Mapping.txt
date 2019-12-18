@@ -1,0 +1,18 @@
+curl -XPUT ' http://101.53.136.181:9200/' -H 'Content-Type: application/json' -d' Product_listing
+{
+   "mappings":{
+      "properties":{
+         "Product Name": { "type":"text"}, "Model Name":{ "type":"text"},
+         "Product Serial No":{ "type":"double"}, "Group Associated":{ "type":"text"}, "product MRP(rs.)":{"type":"double"}
+      }
+   }
+ }
+
+curl -XPOST ' http://101.53.136.181:9200/' -H 'Content-Type: application/json' -d'
+ {
+    "Product Name" : "LED Light",
+    "Model Name" : "syska 3400",
+    "Product Serial No" : "95560123445",
+    "Group Assosiated" : "Group 23",
+    "product MRP(rs.)" :"1999"
+ }
